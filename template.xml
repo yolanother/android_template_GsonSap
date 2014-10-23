@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<template
+    format="4"
+    revision="2"
+    name="GsonSapProviderService"
+    minApi="19"
+    description="Creates a new GSON SAP service component and adds it to your Android manifest.">
+
+    <category value="Service" />
+
+    <parameter
+        id="className"
+        name="Class Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MyService" />
+
+    <parameter
+        id="sapServiceName"
+        name="SAP Application Name"
+        type="string"
+        constraints="nonempty"
+        default="MySapApp" />
+
+    <parameter
+        id="sapServiceId"
+        name="SAP Profile ID"
+        type="string"
+        constraints="unique|nonempty"
+        default="/app/mysapapp" />
+
+    <parameter
+        id="sapServiceLimit"
+        name="Service Limit"
+        type="enum"
+        default="ONE_PEERAGENT">
+        <option id="ANY">Any</option>
+        <option id="ONE_ACCESSORY">One Accessory</option>
+        <option id="ONE_PEERAGENT">One Peer Agent</option>
+    </parameter>
+
+    <parameter
+        id="sapServiceTimeout"
+        name="Service Timeout (sec)"
+        type="int"
+        constraints="nonempty"
+        default="30" />
+
+    <parameter
+        id="sapChannel"
+        name="Service Channel Number"
+        type="int"
+        constraints="nonempty"
+        default="104" />
+
+    <parameter
+        id="sapDataRate"
+        name="Service Channel Data Rate"
+        type="enum"
+        default="high">
+        <option id="high">High</option>
+        <option id="low">Low</option>
+    </parameter>
+
+    <parameter
+        id="sapPriority"
+        name="Service Channel Priority"
+        type="enum"
+        default="high">
+        <option id="high">High</option>
+        <option id="medium">Medium</option>
+        <option id="low">Low</option>
+    </parameter>
+
+    <parameter
+        id="sapReliability"
+        name="Service Channel Reliability"
+        type="enum"
+        default="enable">
+        <option id="enable">Enabled</option>
+        <option id="disable">Disabled</option>
+    </parameter>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
