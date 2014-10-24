@@ -26,7 +26,7 @@
 
         <meta-data
             android:name="AccessoryServicesLocation"
-            android:value="/res/xml/accessoryservices_${className}.xml" />
+            android:value="/res/xml/accessoryservices_${className?lower_case}.xml" />
     </application>
 
 </manifest>

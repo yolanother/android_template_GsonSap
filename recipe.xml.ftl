@@ -5,9 +5,9 @@
     <instantiate from="src/app_package/Service.java.ftl"
                    to="${escapeXmlAttribute(srcOut)}/${className}.java" />
     <instantiate from="accessoryservices.xml.ftl"
-                   to="res/xml/accessoryservices_${className}.xml" />
+                   to="res/xml/accessoryservices_${className?lower_case}.xml" />
     <instantiate from="consumer_accessoryservices.xml.ftl"
-                   to="${escapeXmlAttribute(rootOut)}/consumer_accessoryservices_${className}.xml" />
+                   to="${escapeXmlAttribute(rootOut)}/consumer_accessoryservices_${className?lower_case}.xml" />
 
     <copy from="libs/sdk-v1.0.0.jar"
             to="${escapeXmlAttribute(libsOut)}/sdk-v1.0.0.jar" />
