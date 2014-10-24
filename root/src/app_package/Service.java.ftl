@@ -8,6 +8,7 @@ import com.doubtech.gear.gsonsapprovider.GenericGsonSapRequest;
 import com.doubtech.gear.gsonsapprovider.GsonSapProvider;
 import com.doubtech.gear.gsonsapprovider.GsonSapProvider.JsonSapProviderConnection.Requester;
 
+@Channel(${sapChannel})
 public class ${className} extends GsonSapProvider {
     public static final String TAG = ${className}.class.getSimpleName();
 
