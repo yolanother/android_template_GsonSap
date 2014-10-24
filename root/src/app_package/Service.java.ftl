@@ -7,6 +7,8 @@ import android.os.IBinder;
 import com.doubtech.gear.gsonsapprovider.GenericGsonSapRequest;
 import com.doubtech.gear.gsonsapprovider.GsonSapProvider;
 import com.doubtech.gear.gsonsapprovider.GsonSapProvider.JsonSapProviderConnection.Requester;
+import com.doubtech.gear.gsonsapprovider.annotations.Channel;
+import com.doubtech.gear.gsonsapprovider.annotations.PreventUnregistered;
 
 @Channel(${sapChannel})
 public class ${className} extends GsonSapProvider {
