@@ -42,14 +42,14 @@
     <parameter
         id="sapServiceTimeout"
         name="Service Timeout (sec)"
-        type="int"
+        type="string"
         constraints="nonempty"
         default="30" />
 
     <parameter
         id="sapChannel"
         name="Service Channel Number"
-        type="int"
+        type="string"
         constraints="nonempty"
         default="104" />
 
