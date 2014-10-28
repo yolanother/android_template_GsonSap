@@ -1,14 +1,9 @@
 package ${packageName};
 
-import android.app.Service;
-import android.content.Intent;
-import android.os.IBinder;
-
-import com.doubtech.gear.gsonsapprovider.GenericGsonSapRequest;
-import com.doubtech.gear.gsonsapprovider.GsonSapProvider;
-import com.doubtech.gear.gsonsapprovider.GsonSapProvider.JsonSapProviderConnection.Requester;
-import com.doubtech.gear.gsonsapprovider.annotations.Channel;
-import com.doubtech.gear.gsonsapprovider.annotations.PreventUnregistered;
+import com.samsung.gear.gsonsapproviderservice.GenericGsonSapRequest;
+import com.samsung.gear.gsonsapproviderservice.GsonSapProvider;
+import com.samsung.gear.gsonsapproviderservice.GsonSapProvider.JsonSapProviderConnection.Requester;
+import com.samsung.gear.gsonsapproviderservice.annotations.Channel;
 
 @Channel(${sapChannel})
 public class ${className} extends GsonSapProvider {
